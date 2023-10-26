@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <label for="usernameOrEmail">Username or Email:</label>
+            <input type="text" id="usernameOrEmail" name="usernameOrEmail" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="rememberMe">Remember Me</label>
+            <input type="checkbox" id="rememberMe" name="rememberMe">
+
+            <button type="submit">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <p><a href="forgot-password.html">Forgot Password?</a></p>
+    </div>
+</body>
+</html>
+
