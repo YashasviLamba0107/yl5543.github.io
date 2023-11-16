@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificates</title>
+</head>
+<body>
+    <h1>My OD/ML and Certificates</h1>
+    <div id="certificateList"></div>
+    <div id="ODList"></div>
+    <div id="MLList"></div>
+    
+        <!-- Certificates will be displayed here -->
+    <script>
+        // Simulated user-specific certificate data (replace this with actual data from your backend)
+        const certificates = [
+            { name: "Certificate 1", date: "2023-01-01", url: "certificate1.pdf" },
+            { name: "Certificate 2", date: "2023-02-15", url: "certificate2.jpg" },
+            { name: "OD 1", date: "2023-04-21", url: "OD1.jpg" },
+            { name: "OD 2", date: "2023-05-22", url: "OD2.jpg" },
+            { name: "ML 1", date: "2023-06-23", url: "ML1.jpg" },
+            { name: "ML 2", date: "2023-07-24", url: "ML2.jpg" },
+            // Add more certificate objects as needed
+        ];
+
+        
+
+        // Function to display certificates
+        function displayCertificates() {
+            const certificateList = document.getElementById("certificateList");
+
+            certificates.forEach((certificate, index) => {
+                const certificateDiv = document.createElement("div");
+                certificateDiv.innerHTML = `
+                    <p><strong>${certificate.name}</strong></p>
+                    <p>Date: ${certificate.date}</p>
+                    <a href="${certificate.url}" target="_blank">View Certificate</a>
+                    <hr>
+                `;
+                certificateList.appendChild(certificateDiv);
+            });
+        }
+
+        // Call the function to display certificates when the page loads
+        window.onload = displayCertificates;
+    </script>
+</body>
+</html>
